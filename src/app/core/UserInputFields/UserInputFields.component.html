@@ -1,0 +1,25 @@
+<body>
+    <h1>{{action}} user</h1>
+<form #UserForm="ngForm">
+    <label for="name">Name</label>
+    <input type="text" id="name" required minlength="4" [value]="employeeToRefresh.name">
+    <label for="email">Email</label>
+    <input type="email" id="email" required [value]="employeeToRefresh.email">
+    <label for="phoneNumber">Phone number</label>
+    <input type="tel" type="number" id="phoneNumber" required max="9999999999" [value]="employeeToRefresh.phoneNumber">
+    <label for="imageUrl">Photo link</label>
+    <input type="url" id="imageUrl" required [value]="employeeToRefresh.imageUrl">
+    <label for="birthDate">Birth date</label>
+    <input type="date" id="birthDate" required [value]="employeeToRefresh.birthDate">
+    <label for="role">Role</label>
+    <input type="text" id="role" required [value]="employeeToRefresh.role">
+    <label for="department">Department</label>
+    <input type="text" id="department" required [value]="employeeToRefresh.department">
+
+    <div class="div-buttons">
+        <button [routerLink]="['/users']" class="button">Back</button>
+        <button (click)="hdlClick()" [routerLink]="['']" type="submit" class="button">Save</button>
+    </div>
+    
+</form>
+</body>

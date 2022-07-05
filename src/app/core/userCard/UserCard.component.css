@@ -1,0 +1,33 @@
+*{
+    margin:0;
+}
+.wrapper{
+    display: flex;
+}
+
+.title{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+img{
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+    border: 2px solid black;
+    margin: 2px 15px;
+}
+
+.additional{
+    color: grey;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.date{
+    margin-top: 9px;
+}
+
+.center-left{
+    text-align: left;
+}

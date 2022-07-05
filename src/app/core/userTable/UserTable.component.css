@@ -1,0 +1,107 @@
+table {
+  border-collapse: collapse;
+  margin: 0 5vw;
+  width: 90vw;
+}
+
+td {
+  text-align: center;
+}
+
+tr:nth-child(2n+1) {
+  background-color: #d6e8ee;
+}
+
+th {
+  font-size: 1.3em;
+}
+
+.app-input-div {
+  align-items: center;
+  align-content: space-between;
+  display: flex;
+  justify-content: left;
+  margin-left:5vw;
+  margin-right: 2.5vw;
+}
+
+.app-input-input {
+  border: none;
+  border-bottom: 1px solid grey;
+  height: 20px;
+  outline: none;
+  width: calc(90vw - 130px);
+}
+
+.app-input-p {
+  font-weight: 700;
+  height: auto;
+  margin-right: 10px;
+}
+
+.app-input-button {
+  font-weight: 600;
+  height: auto;
+  margin-bottom: 10px;
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+  border-radius: 10px;
+  width: 150px;
+  height: 30px;
+}
+
+.app-input-button:hover {
+  opacity: 0.8;
+}
+.app-input-button:hover{
+  cursor: pointer;
+}
+
+.controls {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.controls button, p{
+  background-color: white;
+  border: none;
+  color: black;
+  font-size: 25px;
+  margin:0;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.controls button:hover{
+  cursor: pointer;
+}
+
+.controls input{
+  background-color: white;
+  border: none;
+  color: black;
+  font-size: 25px;
+  margin:0;
+  margin-bottom: 8px;
+  text-align: center;
+  outline: none;
+}
+
+.button{
+  font-weight: 600;
+  height: 30px;
+  background-color: darkblue;
+  color: white;
+  font-family: sans-serif;
+  border-radius: 5px;
+  width: 60px;
+  border: none;
+  margin: 3px;
+}
+
+.button:hover{
+  cursor: pointer;
+  opacity: 0.8;
+}

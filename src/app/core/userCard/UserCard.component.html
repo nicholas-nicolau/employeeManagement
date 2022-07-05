@@ -1,0 +1,9 @@
+<div class="wrapper">
+    <img [src]="src">
+    <div>
+        <p class="title center-left">{{ name }}</p>
+        <a class="additional center-left" href="mailto:{{email}}">✉ {{ email }}</a>
+        <a class="additional center-left" href="tel:{{ phoneNumber | PhoneFormat}}" style="display:block; text-decoration:none">📞{{ phoneNumber | PhoneFormat}}</a>
+        <p class="date additional center-left" style="font-weight: 300;">Added on: 14/05/2022 17:05</p>
+    </div>
+</div>

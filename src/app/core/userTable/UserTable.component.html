@@ -1,0 +1,37 @@
+<div class="app-input-div">
+    <p class="app-input-p">SEARCH</p>
+    <input [(ngModel)]="filter" type="text" placeholder="name, email, phone number, role or department"
+        class="app-input-input">
+    <button [routerLink]="['/edit/-1']" class="app-input-button">Add Employee</button>
+</div>
+
+<table>
+    <tr>
+        <th>User</th>
+        <th>BirthDate</th>
+        <th>Role</th>
+        <th>Department</th>
+        <th>Options</th>
+    </tr>
+    <tr *ngFor="let employee of filteredEmployees; let i=index" [id]="employee.id">
+            <td *ngIf="showElement(i)">
+                <app-user-card [name]="employee.name" [email]="employee.email" [phoneNumber]="employee.phoneNumber"
+                    [src]="employee.imageUrl"></app-user-card>
+            </td>
+            <td *ngIf="showElement(i)">{{fixingDateFormat(employee.birthDate)}}</td>
+            <td *ngIf="showElement(i)">{{employee.role}}</td>
+            <td *ngIf="showElement(i)">{{employee.department}}</td>
+            <td *ngIf="showElement(i)">
+                <div>
+                    <button [routerLink]="['/edit/',employee.id!]" class="button">Edit</button>
+                    <button (click)="deleteById(employee.id!)" class="button" style="background-color:rgb(157, 0, 0)">Delete</button>
+                </div>
+            </td>
+    </tr>
+</table>
+
+<div class="controls">
+    <p><Button style="transform: rotate(180deg);" (click)="previousPage()">&#10140;</Button> {{ totalOfPages==0?0:currentPage }} / {{ totalOfPages }} <Button (click)="nextPage()">&#10140;</Button></p>
+    <p>Displaying {{totalOfPages==0?0:(limitPerPage * (currentPage-1) + 1)}} to {{(limitPerPage * currentPage)>filteredEmployees.length?filteredEmployees.length:(limitPerPage * currentPage)}} of {{ filteredEmployees.length }} </p>
+    <p>Employees per page: <input type="number" min="1" [max]="filteredEmployees.length" [(ngModel)]="amountToDisplay"></p>
+</div>
