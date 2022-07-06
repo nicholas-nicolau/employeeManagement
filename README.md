@@ -1,4 +1,4 @@
-# Angular - Employee Management App
+# [Angular - Employee Management App](https://employeesappnm.netlify.app/)
 ## Description
 On this application you'll be able to Create, Read, Update and Delete any Employee profile, like a standard CRUD application.
 <br>
@@ -35,4 +35,6 @@ The main component of this application is a Table so I didn't made it resposive 
 <br>
 *Angular
 *CLI
+
+### To access the application you can follow the link on the headline or [here](https://employeesappnm.netlify.app/)
 
