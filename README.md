@@ -1,4 +1,4 @@
-# Employee Management App
+# Angular - Employee Management App
 ## Description
 On this application you'll be able to Create, Read, Update and Delete any Employee profile, like a standard CRUD application.
 <br>
