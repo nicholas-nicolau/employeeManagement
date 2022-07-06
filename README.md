@@ -24,13 +24,12 @@ Each row of the table has two options: Edit and Delete.
 <br>
 <br>
 At last but not least, you can add a new Employee by clicking on "Add Employee" and fill the form that will be displayed.
-<br>
 ![image](https://user-images.githubusercontent.com/96356472/177456567-c6db24d1-1146-4c5e-b07b-f63f0f14c4e4.png)
 <br>
 <br>
 I still haven't build a Form Validation so please, behave yourself and fill the fields properly, comrade!
 <br>
-The main component of this application is a Table so I didn't made it resposible for Cellphones and small screens, the best user experience will be at 600px and above.
+The main component of this application is a Table so I didn't made it resposive for Cellphones and small screens, the best user experience will be at 600px and above.
 
 ## Technologies used
 <br>
