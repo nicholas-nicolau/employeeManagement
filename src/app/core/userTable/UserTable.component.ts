@@ -38,10 +38,7 @@ export class UserTable implements OnInit {
 
     set filter(value: string) {
         this._filterBy = value
-        this.filteredEmployees = this._employess.filter((employee: User) => this.filterByAllFields(employee, this._filterBy))
-        this.setLimitEqualEmployeeAmount(this.filteredEmployees.length)
-        this.setTotalOfPages(this.filteredEmployees.length, this.limitPerPage)
-        this.currentPage = 1
+        this.filterScript()
     }
 
     get filter() {
@@ -61,7 +58,16 @@ export class UserTable implements OnInit {
     deleteById(id: number) {
         this.userTableService.deleteById(id)
         this.filteredEmployees = this._employess
+        if((document.getElementById("filter-input") as HTMLInputElement).value!="") this._filterBy=(document.getElementById("filter-input") as HTMLInputElement).value
+        this.filterScript()
+    }
+
+    filterScript(){
+        this.filteredEmployees = this._employess.filter((employee: User) => this.filterByAllFields(employee, this._filterBy))
+        this.setLimitEqualEmployeeAmount(this.filteredEmployees.length)
         this.setTotalOfPages(this.filteredEmployees.length, this.limitPerPage)
+        if(this.currentPage>this.totalOfPages)this.currentPage=this.totalOfPages
+        if(this.currentPage<=0 && this.totalOfPages !=0)this.currentPage=1
     }
 
     filterByAllFields(employee: User,
