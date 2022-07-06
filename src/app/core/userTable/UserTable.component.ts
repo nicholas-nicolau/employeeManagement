@@ -58,7 +58,7 @@ export class UserTable implements OnInit {
     deleteById(id: number) {
         this.userTableService.deleteById(id)
         this.filteredEmployees = this._employess
-        if((document.getElementById("filter-input") as HTMLInputElement).value!="") this._filterBy=(document.getElementById("filter-input") as HTMLInputElement).value
+        this._filterBy = (document.getElementById("filter-input") as HTMLInputElement).value
         this.filterScript()
     }
 
